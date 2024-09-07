@@ -1,0 +1,11 @@
+[Unit]
+After=network.target
+Description=Honeypot Checker Server
+
+[Service]
+ExecStart=/home/ubuntu/honeypot_checker/.venv/bin/fastapi run /home/ubuntu/honeypot_checker/main.py --port 80
+Restart=always
+RestartSec=3s
+
+[Install]
+WantedBy=multi-user.target
