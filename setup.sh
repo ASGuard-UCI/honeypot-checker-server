@@ -11,3 +11,4 @@ sudo cp honeypot-checker-server.service /etc/systemd/system/
 # Enable systemctl task
 sudo systemctl enable --now honeypot-checker-server
 sudo systemctl restart honeypot-checker-server
+sudo systemctl status honeypot-checker-server
